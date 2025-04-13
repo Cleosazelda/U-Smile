@@ -41,7 +41,7 @@
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ explode(" ", auth()->user()->name)[0] }}</span>
                     {{-- <img class="img-profile rounded-circle" src="{{ asset('assets/img/undraw_profile.svg')}}"> --}}
-                    <div class="btn btn-danger btn-circle">
+                    <div class="btn btn-secondary btn-circle">
                         <span class="">{{ substr(auth()->user()->name, 0, 1) }}</span>
 
                     </div>

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Riwayat</title>
   <link rel="stylesheet" href="{{asset('landing/asset/css/style.css')}}" />
-  <link rel="shortcut icon" href="{{asset('landing/asset/icons/tomato.png')}}" type="image/x-icon" />
+  <link rel="shortcut icon" href="{{asset('landing/asset/icons/teeth.png')}}" type="image/x-icon" />
   <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
   <script src="https://kit.fontawesome.com/d6601cbc46.js" crossorigin="anonymous"></script>
 </head>
@@ -14,12 +14,12 @@
         <div class="container">
             <nav>
                 <div class="icon">
-                    <a href="{{route('index')}}"><img src="{{asset('landing/asset/icons/tomato.png')}}" alt="" />
-                        <span>SISTEM PAKAR TOMAT</span>
+                    <a href="{{route('index')}}"><img src="{{asset('landing/asset/icons/teeth.png')}}" alt="" />
+                        <span>U-Smile</span>
                     </a>
                 </div>
                 <div class="nav-menu">
-                    <span><a href="{{route('index')}}" style="color: #f00222;">Home</a> / Riwayat</span>
+                    <span><a href="{{route('index')}}" style="color: #749BC2;">Home</a> / Riwayat</span>
                 </div>
             </nav>
         </div>

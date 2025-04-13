@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hasil</title>
   <link rel="stylesheet" href="{{asset('landing/asset/css/style.css')}}" />
-  <link rel="shortcut icon" href="{{asset('landing/asset/icons/tomato.png')}}" type="image/x-icon" />
+  <link rel="shortcut icon" href="{{asset('landing/asset/icons/teeth.png')}}" type="image/x-icon" />
   <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
   <script src="https://kit.fontawesome.com/d6601cbc46.js" crossorigin="anonymous"></script>
 </head>
@@ -14,12 +14,12 @@
         <div class="container">
             <nav>
                 <div class="icon">
-                    <a href="{{route('index')}}"><img src="{{asset('landing/asset/icons/tomato.png')}}" alt="" />
-                        <span>SISTEM PAKAR TOMAT</span>
+                    <a href="{{route('index')}}"><img src="{{asset('landing/asset/icons/teeth.png')}}" alt="" />
+                        <span>U-SMILE</span>
                     </a>
                 </div>
                 <div class="nav-menu">
-                    <span><a href="{{route('index')}}" style="color: #f00222;">Home</a> / Hasil Diagnosis</span>
+                    <span><a href="{{route('index')}}" style="color: #749BC2;">Home</a> / Hasil Diagnosis</span>
                 </div>
             </nav>
         </div>
@@ -196,7 +196,7 @@
                                         <h3 class="card-title fw-semibold">{{ $hypothesis->name }}</h3>
                                         <p class="card-text">{{ number_format($totalBayesValue) }}%</p>
                                         <p class="card-text">{{ $certaintyDescriptions[$hypothesisId] }}</p>
-                                        <a href="{{ route('more_diagnosis_detail', $hypothesis->id) }}" class="btn btn-primary mt-2 rounded-pill">
+                                        <a href="{{ route('more_diagnosis_detail', $hypothesis->id) }}" class="btn my-custom-button mt-2 rounded-pill">
                                             Lihat Detail <i class="fa-solid fa-arrow-right"></i>
                                         </a>
                                     </div>
@@ -207,7 +207,7 @@
                 </div>
 
                 <div class="col-12 text-right"><button type="button" class="btn rounded-pill"
-                        style="background-color: #f00222; color: #ffffff;" onclick="printReport()"><i
+                        style="background-color: #4682A9; color: #ffffff;" onclick="printReport()"><i
                             class="fa fa-print"></i> Print</a></button></div>
             </section>
         </div>
@@ -288,7 +288,7 @@
     </div> --}}
     </main>
     <footer>
-        <span style="color: white;">- 2024 -</span>
+        <span style="color: white;">- 2025 -</span>
     </footer>
     <script>
         function printReport() {

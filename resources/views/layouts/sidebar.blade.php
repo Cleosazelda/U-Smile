@@ -1,11 +1,11 @@
 <!-- Sidebar -->
 @if (auth()->check())
-<ul class="navbar-nav sidebar sidebar-dark accordion" style="background-color: #FF2542" id="accordionSidebar">
+<ul class="navbar-nav sidebar sidebar-dark accordion" style="background-color: #4682A9" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('dashboard')}}">
         <div class="sidebar-brand-icon">
-            <img src="{{asset('landing/asset/img/tomato_icon.png')}}" style="width: 40px" alt="">
+            <img src="{{asset('landing/asset/img/tooth_logo.png')}}" style="width: 60px" alt="">
         </div>
         <div class="sidebar-brand-text mx-3">Exsys Bayes</div>
     </a>

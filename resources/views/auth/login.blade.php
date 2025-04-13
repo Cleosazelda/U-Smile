@@ -10,8 +10,8 @@
     <meta name="author" content="">
 
     <title>Login</title>
-    {{-- <link rel="icon" type="public/img" sizes="16x16" href="{{ asset('assets/img/logo_exapp.png')}}"> --}}
-      <link rel="shortcut icon" href="{{asset('landing/asset/icons/tomato.png')}}" type="image/x-icon" />
+    {{-- <link rel="icon" type="public/img" sizes="16x16" href="{{ asset('assets/img/teeth.png')}}"> --}}
+      <link rel="shortcut icon" href="{{asset('landing/asset/icons/teeth.png')}}" type="image/x-icon" />
 
     <link rel="stylesheet" href="{{asset('landing/asset/css/style.css')}}" />
 
@@ -36,7 +36,7 @@
             <div class="card-body"><!-- Nested Row within Card Body -->
                 <div class="row">
                     <div class="col-lg-6 d-none bg-login-image d-flex justify-content-center align-items-center">
-                        <img src="{{asset('landing/asset/icons/tomato-hero.png')}}" alt="TOMAT" class="hero w-100" style="filter: drop-shadow(10px 10px 20px #ff7575);" />
+                        <img src="{{asset('landing/asset/icons/teeth.png')}}" alt="TOMAT" class="hero w-100" style="filter: drop-shadow(10px 10px 20px #749BC2);" />
                     </div>
                     <div class="col-lg-6">
                         <div class="p-5">
@@ -63,11 +63,11 @@
                                         id="exampleInputPassword" placeholder="Masukkan Password">
                                 </div>
                                 
-                                <button type="submit" class="btn btn-primary btn-user btn-block">
+                                <button type="submit" class="btn btn-primary btn-user btn-block" style="background-color: #749BC2; border-color: #749BC2">
                                     Login
                                 </button>                                
                                 <div class="text-center">
-                                    <a class="small" href="{{ route('add') }}" >Buat Akun</a>
+                                    <a class="small" href="{{ route('add') }}" style="color: #4682A9">Buat Akun</a>
                                 </div>
                             </form>
                         </div>

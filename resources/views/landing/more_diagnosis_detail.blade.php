@@ -14,12 +14,12 @@
         <div class="container">
             <nav>
                 <div class="icon">
-                    <a href="{{route('index')}}"><img src="{{asset('landing/asset/icons/tomato.png')}}" alt="" />
-                        <span>SISTEM PAKAR TOMAT</span>
+                    <a href="{{route('index')}}"><img src="{{asset('landing/asset/icons/teeth.png')}}" alt="" />
+                        <span>U-SMILE</span>
                     </a>
                 </div>
                 <div class="nav-menu">
-                    <span><a href="{{route('index')}}" style="color: #f00222;">Home</a> / Hasil</span>
+                    <span><a href="{{route('index')}}" style="color: #749BC2;">Home</a> / Hasil</span>
                 </div>
             </nav>
         </div>
@@ -197,7 +197,7 @@
     </div> --}}
     </main>
     <footer>
-        <span style="color: white;">- 2024 -</span>
+        <span style="color: white;">- 2025 -</span>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
   <link rel="stylesheet" href="{{asset('landing/asset/css/style.css')}}" />
-  <link rel="shortcut icon" href="{{asset('landing/asset/icons/tomato.png')}}" type="image/x-icon" />
+  <link rel="shortcut icon" href="{{asset('landing/asset/icons/teeth.png')}}" type="image/x-icon" />
   <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
   <script src="https://kit.fontawesome.com/d6601cbc46.js" crossorigin="anonymous"></script>
 </head>
@@ -14,8 +14,8 @@
     <div class="container">
       <nav>
         <div class="icon">
-          <a href="{{route('index')}}"><img src="{{asset('landing/asset/icons/tomato.png')}}" alt="" />
-            <span >SISTEM PAKAR TOMAT</span></a>
+          <a href="{{route('index')}}"><img src="{{asset('landing/asset/icons/teeth.png')}}" alt="" />
+            <span >U-SMILE</span></a>
         </div>
         <ul class="nav-menu">
           <li class="menu"><a href="#beranda">Beranda</a></li>
@@ -31,7 +31,7 @@
           <!-- Jika pengguna login dan perannya admin, tampilkan link Dashboard -->
             
             <div class="dropdown">
-              <button type="button" class="btn btn-danger rounded-circle" data-bs-toggle="dropdown">
+              <button type="button" class="btn btn-secondary rounded-circle" data-bs-toggle="dropdown">
                 {{ substr(auth()->user()->name, 0, 1) }}
               </button>
               <ul class="dropdown-menu">
@@ -84,18 +84,19 @@
     <div class="container">
       <div class="row">
         <section class="hero gap-3 d-flex align-items-center" id="beranda" style="min-height: 100vh">
-          <img src="{{asset('landing/asset/icons/tomato-hero.png')}}" alt="TOMAT" class="w-50" />
+          <img src="{{asset('landing/asset/icons/teeth.png')}}" alt="TOMAT" class="w-50" />
           <div class="banner">
-            <h1 class="fw-bolder">SISTEM PAKAR DIAGNOSA PENYAKIT TANAMAN TOMAT</h1>
+            <h1 class="fw-bolder">SISTEM PAKAR DIAGNOSA PENYAKIT GIGI</h1>
             <p style="text-indent: 30px">
               Sistem pakar adalah sistem komputer yang dirancang untuk menyelesaikan masalah atau memberikan solusi yang rumit dengan cara mengaplikasikan pengetahuan dari seorang ahli dalam bidang tertentu. Sistem pakar memanfaatkan berbagai macam metode untuk menghasilkan solusi yang tepat dan efektif. Salah satu metode yang sering digunakan dalam sistem pakar adalah metode Teorema Bayes.
             </p>
-            <a href="#diagnosa" class="button text-decoration-none p-2 rounded-pill fw-medium">Mulai Diagnosa</a>
+            <a href="#diagnosa" class="button text-decoration-none p-2 rounded-pill fw-medium mt-3 d-inline-block">Mulai Diagnosa</a>
+
           </div>
         </section>
         <section class=" d-flex flex-column align-items-center justify-content-center"
           id="diagnosa">
-          <h2 class="text-center p-2 fw-bolder" style="border-bottom: 5px solid #ff0022;">Diagnosa</h2>
+          <h2 class="text-center p-2 fw-bolder" style="border-bottom: 5px solid #749BC2;">Diagnosa</h2>
           <div class="section-diagnosa p-3 mt-5 border border-3 rounded-4">
             <p>
               Sistem ini menggunakan metode Teorema Bayes untuk mendiagnosis penyakit. Proses dimulai dengan memilih gejala, 
@@ -107,7 +108,7 @@
           </div>
         </section>
         <section class=" d-flex flex-column align-items-center justify-content-center"  id="nama_penyakit">
-          <h2 class="text-center p-2 fw-bold" style="border-bottom: 5px solid #ff0022;">Nama Penyakit</h2>
+          <h2 class="text-center p-2 fw-bold" style="border-bottom: 5px solid #749BC2;">Nama Penyakit</h2>
 
           <div class="daftar-penyakit p-3 mt-5 mb-4 gap-3 row justify-content-center">
             @foreach($hypothesis_data as $item)
@@ -127,13 +128,13 @@
             @endforeach
           </div>
           <div class=" d-flex align-items-center justify-content-center mb-5" style="width: 100%">
-            <a href="{{route('hypothesis_page')}}" class="btn fw-semibold border rounded-pill text-light" style="background-color: #ff0022">Lihat Semua <i class="fa-solid fa-chevron-right  "></i></a>
+            <a href="{{route('hypothesis_page')}}" class="btn fw-semibold border rounded-pill text-light" style="background-color: #749BC2">Lihat Semua <i class="fa-solid fa-chevron-right  "></i></a>
           </div>
         </section>
         @if (auth()->check())
         <section class="d-flex flex-column align-items-center justify-content-center" style="min-height: 50vh; padding-top: 100px;"
           id="riwayat">
-          <h2 class="title p-2 text-center fw-bold mb-5" style="border-bottom: 5px solid #ff0022; margin-left: 10px;">Riwayat</h2>
+          <h2 class="title p-2 text-center fw-bold mb-5" style="border-bottom: 5px solid #749BC2; margin-left: 10px;">Riwayat</h2>
           <!-- <div class="table-responsive"> -->          
           <table id="dataTable" class="p-3 gap-3 table table-bordered mb-4"  width="100%" cellspacing="0">
             {{-- <tbody class="pt-2"> --}}
@@ -154,7 +155,7 @@
                   </div>
 
                   <div class="col-md-1 d-flex justify-content-center justify-content-md-end gap-1 ">
-                    <button type="button" class="btn text-danger" data-bs-toggle="modal" data-bs-target="#modalId{{ $item->id }}"><i class="fa-solid fa-trash"></i></button>
+                    <button type="button" class="btn text-secondary" data-bs-toggle="modal" data-bs-target="#modalId{{ $item->id }}"><i class="fa-solid fa-trash"></i></button>
                     <a href="{{ route('history_detail',  $item->id)}}" class="btn text-primary fs-5"><i class="fa-solid fa-chevron-right"></i></a>
                   </div>
                 </div>
@@ -191,7 +192,7 @@
             </tbody> 
           </table>
           <div class=" d-flex align-items-center justify-content-center mb-5" style="width: 100%">
-            <a href="{{route('history_page')}}" class="btn fw-semibold border rounded-pill text-light" style="background-color: #ff0022">Lihat Semua <i class="fa-solid fa-chevron-right  "></i></a>
+            <a href="{{route('history_page')}}" class="btn fw-semibold border rounded-pill text-light" style="background-color: #749BC2">Lihat Semua <i class="fa-solid fa-chevron-right  "></i></a>
           </div>
         </section>
         @endif        
@@ -200,7 +201,7 @@
     </div>
   </main>
   <footer>
-    <span style="color: white;">- 2024 -</span>
+    <span style="color: white;">- 2025 -</span>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

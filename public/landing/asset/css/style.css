@@ -18,11 +18,12 @@ header{
     position: fixed;
     width: 100%;
     /* background-color: #fff; */
+    
 
     background-color: #f8f9fa;
     top: 0px;
     /* border-bottom: 1px solid #FF2542; */
-    border-bottom: 2px solid #04e762;
+    border-bottom: 2px solid #749BC2;
     box-shadow: 0 4px 18px 0px #e3ece7;
     z-index: 5;
 }
@@ -51,12 +52,13 @@ header nav .icon a span{
     width: 170px;
     font-size: 20px;
     font-weight: 700;
-    color: #FF2542;
+    color: #749BC2;
 }
 
 header nav .nav-menu{
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 20px;
 }
 
@@ -69,13 +71,13 @@ header nav .nav-menu a{
 }
 
 header nav .nav-menu a:hover{
-    color: #ff0022;
+    color: #4682A9;
 }
 
 header nav .nav-menu .login{
     padding: 10px;
     border-radius: 10px;
-    background-color: #ff0022;
+    background-color: #749BC2;
     color: #fff;
     font-weight: 500;
     transition: 300ms ease-in-out;
@@ -84,7 +86,7 @@ header nav .nav-menu .login{
 
 header nav .nav-menu .login:hover{
     background-color: #fff;
-    border: 1px solid #ff0022;
+    border: 1px solid #749BC2;
 }
 
 footer{
@@ -106,10 +108,34 @@ section{
 }
 
 section  h1{
-    color: #ff0022;
+    color: #749BC2;
     font-size: 2.5rem;
     font-weight: 800;
 }
+
+section  h2{
+    color: #749BC2;
+    font-weight: 800;
+}
+
+.icon a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .icon img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .icon span {
+    white-space: nowrap;
+    font-weight: bold;
+    color: #333;
+  }
+  
 
 section  p{
     margin-top: 20px;
@@ -117,7 +143,7 @@ section  p{
 }
 
 section a{
-    background-color: #ff0022;
+    background-color: #749BC2;
     color: #fff;
     transition: ease-in-out 200ms;
     text-decoration: none;
@@ -127,8 +153,8 @@ section a{
 section a:hover{
     /* transform: scale(1.09); */
     background-color: #ffffff;
-    color: #ff0022;
-    border: 1px solid #ff0022;
+    color: #4682A9;
+    border: 1px solid #4682A9;
 }
 
 .daftar-penyakit{
@@ -175,6 +201,18 @@ section a:hover{
     height: 0;
 } */
 
+.my-custom-button {
+    background-color: #749BC2 !important;
+    border-color: #749BC2 !important;
+    color: white !important;
+}
+
+.my-custom-button:hover {
+    background-color: #4682A9 !important;
+    border-color: #4682A9 !important;
+}
+
+
 .custom-checkbox .myCheckbox {
     display: inline-block;
     width: 20px;
@@ -190,7 +228,7 @@ section a:hover{
     padding: 8px;
     border: 1px solid #ff002200;
     border-radius: 10px;
-    background-color: #ff0022;
+    background-color: #749BC2;
     color: #fff;
     font-weight: 500;
     transition: 300ms ease-in-out;
@@ -198,8 +236,8 @@ section a:hover{
 
 .submit:hover{
     background-color: #fff;
-    color: #ff0022;
-    border: 1px solid #ff0022;
+    color: #4682A9;
+    border: 1px solid #4682A9;
 }
 
 .box-login{

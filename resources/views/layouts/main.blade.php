@@ -9,9 +9,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Exsys Bayes Method</title>
+    <title>Diagnosa Penyakit Gigi</title>
     {{-- <link rel="icon" type="public/img" sizes="16x16" href="{{ asset('assets/img/logo_exapp.png')}}"> --}}
-    <link rel="shortcut icon" href="{{asset('landing/asset/icons/tomato.png')}}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{asset('landing/asset/icons/teeth.png')}}" type="image/x-icon" />
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('assets/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">

@@ -9,8 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Exsys Bayes Method</title>
-    <link rel="icon" type="public/img" sizes="16x16" href="{{ asset('assets/img/logo_exapp.png')}}">
+    <title>Profile</title>
+
     <link rel="stylesheet" href="{{asset('landing/asset/css/style.css')}}" />
 
     <!-- Custom fonts for this template-->
@@ -18,6 +18,7 @@
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
+    
 
     <!-- Custom styles for this template-->
     
@@ -34,12 +35,12 @@
             <div class="card-body"><!-- Nested Row within Card Body -->
                 <div class="row">
                     <div class="col-lg-6 d-none bg-login-image d-flex justify-content-center align-items-center">
-                        <img src="{{asset('landing/asset/icons/tomato-hero.png')}}" alt="TOMAT" class="hero w-100" style="filter: drop-shadow(10px 10px 20px #ff7575);" />
+                        <img src="{{asset('landing/asset/icons/teeth.png')}}" alt="TOMAT" class="hero w-100" style="filter: drop-shadow(10px 10px 20px #749BC2);" />
                     </div>
                     <div class="col-lg-6">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Profil</h1>
+                            <h1 class="h4 mb-4" style="color: #749BC2; font-weight: bold;">Profil</h1>
                             </div>
                             @if (session('status'))
                                     <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -91,7 +92,7 @@
                                             </label>
                                         </div>
                                     </div> --}}
-                                <button type="submit" class="btn btn-primary btn-user btn-block">
+                                <button type="submit" class="btn btn-user btn-block" style="background-color: #749BC2; border-color: #749BC2; color: white;">
                                     Submit
                                 </button>
                             </form>

@@ -25,8 +25,8 @@ class LandingController extends Controller
             'diagnosis_data' => Diagnosis::where('user_id', Auth::id())
                 ->orderBy('created_at', 'desc')
                 ->paginate(5),
-            'hypothesis_data' => Hypothesis::orderBy('id', 'desc')->paginate(4),
-            
+            'hypothesis_data' => Hypothesis::with('images')->orderBy('id', 'desc')->paginate(3),
+
         ]);
     }
 
@@ -142,7 +142,7 @@ class LandingController extends Controller
     public function history_page()
     {
         return view('landing.history', [
-            'diagnosis_data' => Diagnosis::where('user_id', Auth::id())->orderBy('created_at', 'desc')->get()
+            'diagnosis_data' => Diagnosis::with('hypothesis.images')->where('user_id', Auth::id())->orderBy('created_at', 'desc')->get()
 
         ]);
     }

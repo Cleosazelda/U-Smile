@@ -114,11 +114,11 @@
             @foreach($hypothesis_data as $item)
             <a href="{{ route('hypothesis_detail',  $item->id)}}" class="penyakit card border-3 rounded-5 align-items-center p-3 text-decoration-none">
               <div class="img-cover">
-                @if ($item->images->isNotEmpty())
-                    <img src="" height="300px" class="me-3 rounded" alt="Gambar Penyakit">
-                @else
-                    <p>Gambar tidak tersedia.</p>
-                @endif
+              @if ($item->images->isNotEmpty())
+                  <img src="{{ asset('storage/Hypothesis-Image/' . $item->images->first()->image_path) }}" height="300px" class="me-3 rounded" alt="Gambar Penyakit">
+              @else
+                  <p>Gambar tidak tersedia.</p>
+              @endif
                 {{-- <img src="" class="card-img" alt="Gambar Penyakit"> --}}
               </div>
               <div class="card-body d-flex justify-content-center align-items-center">
@@ -143,7 +143,7 @@
                 <div class="g-0 d-flex flex-row align-items-center justify-content-between mx-5" style="width: 90%;">
                   <div class="d-flex align-items-center" style="width: 80%">
                     <div class="img-diagnosis d-flex justify-content-center align-items-center border border-1 overflow-hidden">
-                      <img src="" class="img-size rounded-start border img-fluid" style="height: 100%; width: 100%;"  alt="...">
+                      <img src="storage/Hypothesis-Image/{{$item->hypothesis->images->first()->image_path}}" class="img-size rounded-start border img-fluid" style="height: 100%; width: 100%;"  alt="...">
                     </div>
                     <div class="col border-0 d-flex align-items-center">
                       <div class="card-body ">

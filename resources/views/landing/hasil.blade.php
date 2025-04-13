@@ -82,7 +82,7 @@
                                     <div class="carousel-inner text-center d-flex align-item-center" style="height: 100%">
                                         @foreach ($bestHypothesisData->images as $key => $item)
                                             <div class="carousel-item {{ $key == 0 ? 'active' : '' }}  " style="height: 100%">
-                                                <img src="" 
+                                                <img src="{{ asset('storage/Hypothesis-Image/' . $item->image_path) }}" 
                                                     class="d-block mx-auto img-fluid modal-image" 
                                                     alt="Image"
                                                     style="height: 100%" >
@@ -185,11 +185,16 @@
                     @php
                         $hypothesis = $hypothesesData[$hypothesisId];
                     @endphp
+
+                    @if($hypothesis->images && $hypothesis->images->isNotEmpty())  <!-- Cek apakah gambar ada -->
+                        @php
+                            $image = $hypothesis->images->first();  // Ambil gambar pertama yang terkait
+                        @endphp
                         <div class="card rounded-4 border-2 mb-5" style="max-width: 100vw;">
                             <div class="row g-0 align-items-center">
                                 <div class="col-md-2 rounded-4 me-5" style="max-height: 450px; overflow: hidden;">
                                     {{-- <img src="/storage/Hypothesis-Image/{{ $hypothesis->image }}" class="img-fluid " alt="Gambar Penyakit"> --}}
-                                    <img src="" class="img-fluid " alt="Gambar Penyakit">
+                                    <img src="{{ asset('storage/Hypothesis-Image/' . $image->image_path) }}" class="img-fluid " alt="Gambar Penyakit" style="height: 250px;">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
@@ -203,6 +208,7 @@
                                 </div>
                             </div>
                         </div>
+                        @endif
                     @endforeach                    
                 </div>
 

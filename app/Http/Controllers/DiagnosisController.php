@@ -11,7 +11,7 @@ class DiagnosisController extends Controller
     {
         return view('diagnosis',[
             'title' => 'History Diagnosis',
-            'diagnosis_data' => Diagnosis::orderBy('created_at', 'desc')->get()
+            'diagnosis_data' => Diagnosis::with('hypothesis.images')->orderBy('created_at', 'desc')->get()
         ]);
     }
 

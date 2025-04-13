@@ -142,14 +142,6 @@ class AppController extends Controller
         // Determine certainty description based on maxTotalBayes value
         $certainty = $this->getCertaintyDescription($maxTotalBayes);
 
-        Diagnosis::create([
-            'hypothesis_id' => $bestHypothesisData->id, // Menggunakan ID dari hypothesis terbaik
-            'name' => $request->input('name'),
-            'description' => $request->input('description'),
-            'value' => $maxTotalBayes, // Menyimpan nilai Total Bayes tertinggi
-            'user_id' => Auth::id() // Simpan ID pengguna yang sedang login
-
-        ]);
 
             // dd($bestHypothesisData);
             // Calculate total contributions for each hypothesis
@@ -216,6 +208,15 @@ class AppController extends Controller
         //     dd($totalWeight);
 
         // }
+
+        Diagnosis::create([
+            'hypothesis_id' => $bestHypothesisData->id, // Menggunakan ID dari hypothesis terbaik
+            'name' => $request->input('name'),
+            'description' => $request->input('description'),
+            'value' => $maxTotalBayes, // Menyimpan nilai Total Bayes tertinggi
+            'user_id' => Auth::id() // Simpan ID pengguna yang sedang login
+
+        ]);
 
         return view('expert_result', compact(
             'results', 

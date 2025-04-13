@@ -7,6 +7,7 @@ namespace Database\Seeders;
 use App\Models\Diagnosis;
 use App\Models\Evidence;
 use App\Models\Hypothesis;
+use App\Models\HypothesisImage;
 use App\Models\Rule;
 use App\Models\Setting;
 use App\Models\User;
@@ -50,6 +51,15 @@ class DatabaseSeeder extends Seeder
         Hypothesis::create(['code' => 'P003', 'name' => 'Gingivitis', 'description' => 'Gingivitis adalah peradangan pada gusi yang ditandai dengan kemerahan, pembengkakan, dan perdarahan saat menyikat gigi.', 'solution' => 'Scalling, Root planing']);
         Hypothesis::create(['code' => 'P004', 'name' => 'Abses Gigi', 'description' => 'Abses gigi adalah kumpulan nanah yang terbentuk akibat infeksi bakteri di dalam gigi atau gusi.', 'solution' => 'Trepanasi, Perawatan saluran akar']);
         Hypothesis::create(['code' => 'P005', 'name' => 'Pulpitis', 'description' => 'Pulpitis adalah peradangan pada pulpa gigi, yaitu jaringan lunak di dalam gigi yang mengandung saraf dan pembuluh darah. ', 'solution' => 'Perawatan saluran akar']);
+
+        // Add data gambar hypotesis
+        HypothesisImage::create(['hypothesis_id' => 1, 'image_path' => 'Karies.png']);
+        HypothesisImage::create(['hypothesis_id' => 2, 'image_path' => 'Periodontitis.png']);
+        HypothesisImage::create(['hypothesis_id' => 3, 'image_path' => 'Gingivitis.png']);
+        HypothesisImage::create(['hypothesis_id' => 4, 'image_path' => 'Abses.png']);
+        HypothesisImage::create(['hypothesis_id' => 5, 'image_path' => 'Pulpitis.png']);
+
+
         // Add diagnosis data
         // Diagnosis::create(['hypothesis_id' => 1, 'name' => 'jonathan', 'description' => 'pasien', 'value' => rand(50, 100) * 0.01]);
         // Diagnosis::create(['hypothesis_id' => 1, 'name' => 'zeppeli', 'description' => 'pasien', 'value' => rand(50, 100) * 0.01]);

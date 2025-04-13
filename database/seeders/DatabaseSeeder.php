@@ -36,23 +36,20 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // Add evidence data
-        Evidence::create(['code' => 'G001', 'name' => 'Tangkai daun berwarna putih']);
-        Evidence::create(['code' => 'G002', 'name' => 'Daun berubah warna menjadi kuning ']);
-        Evidence::create(['code' => 'G003', 'name' => 'Tanaman tampak lemah']);
-        Evidence::create(['code' => 'G004', 'name' => 'Daun warna kuning bagian bawah']);
-        Evidence::create(['code' => 'G005', 'name' => 'Bercak-bercak berwarna hijau kekuningan muncul di permukaan batang']);
-        Evidence::create(['code' => 'G006', 'name' => 'Daun-daun menunjukkan pola mosaik dengan bercak-bercak kuning dan hijau']);
-        Evidence::create(['code' => 'G007', 'name' => 'Pertumbuhan tanaman terhambat']);
-        Evidence::create(['code' => 'G008', 'name' => 'Buah memiliki bercak-bercak warna yang tidak normal']);
-        Evidence::create(['code' => 'G009', 'name' => 'Daun mengering dan gugur']);
-        Evidence::create(['code' => 'G010', 'name' => 'Daun-daun yang terinfeksi cenderung menggulung ke atas dan ke dalam']);
-        Evidence::create(['code' => 'G011', 'name' => 'Daun-daun menjadi kaku']);
-
+        Evidence::create(['code' => 'G001', 'name' => 'Gigi ngilu saat makan/minum']);
+        Evidence::create(['code' => 'G002', 'name' => 'Nyeri gigi spontan']);
+        Evidence::create(['code' => 'G003', 'name' => 'Gigi berlubang']);
+        Evidence::create(['code' => 'G004', 'name' => 'Gusi berdarah']);
+        Evidence::create(['code' => 'G005', 'name' => 'Gigi bergoyang']);
+        Evidence::create(['code' => 'G006', 'name' => 'Gusi bengkak']);
+        Evidence::create(['code' => 'G007', 'name' => 'Sakit kepala']);
+        
         // Add hypothesis data
-        Hypothesis::create(['code' => 'P001', 'name' => 'Layu fusarium', 'description' => 'penjelasan penyakit', 'solution' => 'solution']);
-        Hypothesis::create(['code' => 'P002', 'name' => 'Layu bakteri', 'description' => 'penjelasan penyakit', 'solution' => 'solution']);
-        Hypothesis::create(['code' => 'P003', 'name' => 'Mosaik', 'description' => 'penjelasan penyakit', 'solution' => 'solution']);
-        Hypothesis::create(['code' => 'P004', 'name' => 'Virus Kuning Keriting Pada Daun Tomat', 'description' => 'penjelasan penyakit', 'solution' => 'solution']);
+        Hypothesis::create(['code' => 'P001', 'name' => 'Karies Gigi', 'description' => 'Karies gigi adalah kerusakan pada jaringan keras gigi akibat aktivitas bakteri yang menghasilkan asam dari sisa makanan, terutama gula.', 'solution' => 'Restorasi gigi(penambalan)']);
+        Hypothesis::create(['code' => 'P002', 'name' => 'Periodontitis', 'description' => 'Periodontitis adalah infeksi serius pada gusi yang merusak jaringan lunak dan tulang penyangga gigi.', 'solution' => 'Scalling, Root planing, Splinting']); 
+        Hypothesis::create(['code' => 'P003', 'name' => 'Gingivitis', 'description' => 'Gingivitis adalah peradangan pada gusi yang ditandai dengan kemerahan, pembengkakan, dan perdarahan saat menyikat gigi.', 'solution' => 'Scalling, Root planing']);
+        Hypothesis::create(['code' => 'P004', 'name' => 'Abses Gigi', 'description' => 'Abses gigi adalah kumpulan nanah yang terbentuk akibat infeksi bakteri di dalam gigi atau gusi.', 'solution' => 'Trepanasi, Perawatan saluran akar']);
+        Hypothesis::create(['code' => 'P005', 'name' => 'Pulpitis', 'description' => 'Pulpitis adalah peradangan pada pulpa gigi, yaitu jaringan lunak di dalam gigi yang mengandung saraf dan pembuluh darah. ', 'solution' => 'Perawatan saluran akar']);
         // Add diagnosis data
         // Diagnosis::create(['hypothesis_id' => 1, 'name' => 'jonathan', 'description' => 'pasien', 'value' => rand(50, 100) * 0.01]);
         // Diagnosis::create(['hypothesis_id' => 1, 'name' => 'zeppeli', 'description' => 'pasien', 'value' => rand(50, 100) * 0.01]);
@@ -79,53 +76,45 @@ class DatabaseSeeder extends Seeder
         // Diagnosis::create(['hypothesis_id' => 4, 'name' => 'jolyne', 'description' => 'pasien', 'value' => rand(50, 100) * 0.01]);
         // Diagnosis::create(['hypothesis_id' => 4, 'name' => 'ermes', 'description' => 'pasien', 'value' => rand(50, 100) * 0.01]);
         // Add rule data
-        Rule::create(['evidence_id' => 1, 'hypothesis_id' => 1, 'weight' => 0.2]);
-        Rule::create(['evidence_id' => 2, 'hypothesis_id' => 1, 'weight' => 0.9]);
-        Rule::create(['evidence_id' => 3, 'hypothesis_id' => 1, 'weight' => 0.2]);
-        Rule::create(['evidence_id' => 4, 'hypothesis_id' => 1, 'weight' => 0.2]);
-        Rule::create(['evidence_id' => 5, 'hypothesis_id' => 1, 'weight' => 0.2]);
-        Rule::create(['evidence_id' => 6, 'hypothesis_id' => 1, 'weight' => 0.9]);
-        Rule::create(['evidence_id' => 7, 'hypothesis_id' => 1, 'weight' => 0.2]);
-        Rule::create(['evidence_id' => 8, 'hypothesis_id' => 1, 'weight' => 0.2]);
-        Rule::create(['evidence_id' => 9, 'hypothesis_id' => 1, 'weight' => 0.2]);
-        Rule::create(['evidence_id' => 10, 'hypothesis_id' => 1, 'weight' => 0.2]);
-        Rule::create(['evidence_id' => 11, 'hypothesis_id' => 1, 'weight' => 0.2]);
+        Rule::create(['evidence_id' => 1, 'hypothesis_id' => 1, 'weight' => 0.56]);
+        Rule::create(['evidence_id' => 2, 'hypothesis_id' => 1, 'weight' => 0]);
+        Rule::create(['evidence_id' => 3, 'hypothesis_id' => 1, 'weight' => 1]);
+        Rule::create(['evidence_id' => 4, 'hypothesis_id' => 1, 'weight' => 0]);
+        Rule::create(['evidence_id' => 5, 'hypothesis_id' => 1, 'weight' => 0]);
+        Rule::create(['evidence_id' => 6, 'hypothesis_id' => 1, 'weight' => 0]);
+        Rule::create(['evidence_id' => 7, 'hypothesis_id' => 1, 'weight' => 0]);
 
-        Rule::create(['evidence_id' => 1, 'hypothesis_id' => 2, 'weight' => 0.7]);
-        Rule::create(['evidence_id' => 2, 'hypothesis_id' => 2, 'weight' => 0.1]);
-        Rule::create(['evidence_id' => 3, 'hypothesis_id' => 2, 'weight' => 0.7]);
-        Rule::create(['evidence_id' => 4, 'hypothesis_id' => 2, 'weight' => 0.9]);
-        Rule::create(['evidence_id' => 5, 'hypothesis_id' => 2, 'weight' => 0.3]);
-        Rule::create(['evidence_id' => 6, 'hypothesis_id' => 2, 'weight' => 0.3]);
-        Rule::create(['evidence_id' => 7, 'hypothesis_id' => 2, 'weight' => 0.2]);
-        Rule::create(['evidence_id' => 8, 'hypothesis_id' => 2, 'weight' => 0.2]);
-        Rule::create(['evidence_id' => 9, 'hypothesis_id' => 2, 'weight' => 0.2]);
-        Rule::create(['evidence_id' => 10, 'hypothesis_id' => 2, 'weight' => 0.2]);
-        Rule::create(['evidence_id' => 11, 'hypothesis_id' => 2, 'weight' => 0.2]);
+        Rule::create(['evidence_id' => 1, 'hypothesis_id' => 2, 'weight' => 1]);
+        Rule::create(['evidence_id' => 2, 'hypothesis_id' => 2, 'weight' => 0.22]);
+        Rule::create(['evidence_id' => 3, 'hypothesis_id' => 2, 'weight' => 0.11]);
+        Rule::create(['evidence_id' => 4, 'hypothesis_id' => 2, 'weight' => 0]);
+        Rule::create(['evidence_id' => 5, 'hypothesis_id' => 2, 'weight' => 0.33]);
+        Rule::create(['evidence_id' => 6, 'hypothesis_id' => 2, 'weight' => 0]);
+        Rule::create(['evidence_id' => 7, 'hypothesis_id' => 2, 'weight' => 0]);
 
-        Rule::create(['evidence_id' => 1, 'hypothesis_id' => 3, 'weight' => 0.7]);
-        Rule::create(['evidence_id' => 2, 'hypothesis_id' => 3, 'weight' => 0.2]);
-        Rule::create(['evidence_id' => 3, 'hypothesis_id' => 3, 'weight' => 0.2]);
-        Rule::create(['evidence_id' => 4, 'hypothesis_id' => 3, 'weight' => 0.2]);
-        Rule::create(['evidence_id' => 5, 'hypothesis_id' => 3, 'weight' => 0.2]);
-        Rule::create(['evidence_id' => 6, 'hypothesis_id' => 3, 'weight' => 0.7]);
-        Rule::create(['evidence_id' => 7, 'hypothesis_id' => 3, 'weight' => 0.9]);
-        Rule::create(['evidence_id' => 8, 'hypothesis_id' => 3, 'weight' => 0.9]);
-        Rule::create(['evidence_id' => 9, 'hypothesis_id' => 3, 'weight' => 0.9]);
-        Rule::create(['evidence_id' => 10, 'hypothesis_id' => 3, 'weight' => 0.9]);
-        Rule::create(['evidence_id' => 11, 'hypothesis_id' => 3, 'weight' => 0.9]);
+        Rule::create(['evidence_id' => 1, 'hypothesis_id' => 3, 'weight' => 0.36]);
+        Rule::create(['evidence_id' => 2, 'hypothesis_id' => 3, 'weight' => 0]);
+        Rule::create(['evidence_id' => 3, 'hypothesis_id' => 3, 'weight' => 0.18]);
+        Rule::create(['evidence_id' => 4, 'hypothesis_id' => 3, 'weight' => 0.14]);
+        Rule::create(['evidence_id' => 5, 'hypothesis_id' => 3, 'weight' => 0]);
+        Rule::create(['evidence_id' => 6, 'hypothesis_id' => 3, 'weight' => 0.18]);
+        Rule::create(['evidence_id' => 7, 'hypothesis_id' => 3, 'weight' => 0]);
 
-        Rule::create(['evidence_id' => 1, 'hypothesis_id' => 4, 'weight' => 0.6]);
-        Rule::create(['evidence_id' => 2, 'hypothesis_id' => 4, 'weight' => 0.5]);
-        Rule::create(['evidence_id' => 3, 'hypothesis_id' => 4, 'weight' => 0.7]);
-        Rule::create(['evidence_id' => 4, 'hypothesis_id' => 4, 'weight' => 0.2]);
-        Rule::create(['evidence_id' => 5, 'hypothesis_id' => 4, 'weight' => 0.9]);
-        Rule::create(['evidence_id' => 6, 'hypothesis_id' => 4, 'weight' => 0.3]);
-        Rule::create(['evidence_id' => 7, 'hypothesis_id' => 4, 'weight' => 0.5]);
-        Rule::create(['evidence_id' => 8, 'hypothesis_id' => 4, 'weight' => 0.5]);
-        Rule::create(['evidence_id' => 9, 'hypothesis_id' => 4, 'weight' => 0.5]);
-        Rule::create(['evidence_id' => 10, 'hypothesis_id' => 4, 'weight' => 0.5]);
-        Rule::create(['evidence_id' => 11, 'hypothesis_id' => 4, 'weight' => 0.5]);
+        Rule::create(['evidence_id' => 1, 'hypothesis_id' => 4, 'weight' => 0.45]);
+        Rule::create(['evidence_id' => 2, 'hypothesis_id' => 4, 'weight' => 0.42]);
+        Rule::create(['evidence_id' => 3, 'hypothesis_id' => 4, 'weight' => 1]);
+        Rule::create(['evidence_id' => 4, 'hypothesis_id' => 4, 'weight' => 0.06]);
+        Rule::create(['evidence_id' => 5, 'hypothesis_id' => 4, 'weight' => 0.09]);
+        Rule::create(['evidence_id' => 6, 'hypothesis_id' => 4, 'weight' => 0.27]);
+        Rule::create(['evidence_id' => 7, 'hypothesis_id' => 4, 'weight' => 0.06]);
+
+        Rule::create(['evidence_id' => 1, 'hypothesis_id' => 5, 'weight' => 0.65]);
+        Rule::create(['evidence_id' => 2, 'hypothesis_id' => 5, 'weight' => 0.41]);
+        Rule::create(['evidence_id' => 3, 'hypothesis_id' => 5, 'weight' => 1]);
+        Rule::create(['evidence_id' => 4, 'hypothesis_id' => 5, 'weight' => 0]);
+        Rule::create(['evidence_id' => 5, 'hypothesis_id' => 5, 'weight' => 0]);
+        Rule::create(['evidence_id' => 6, 'hypothesis_id' => 5, 'weight' => 0.01]);
+        Rule::create(['evidence_id' => 7, 'hypothesis_id' => 5, 'weight' => 0.12]);
 
         // Add Setting data
         Setting::create(['component' => 'title', 'value' => 'Sistem Pakar Penyakit']);

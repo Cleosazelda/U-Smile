@@ -12,6 +12,8 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Termwind\Components\Dd;
+use Illuminate\Support\Facades\Log;
+
 
 class LandingController extends Controller
 {
@@ -203,6 +205,8 @@ class LandingController extends Controller
                     $totalWeight += $rule->weight;
                 }
             }
+            // 🟡 Log total bobot
+             Log::debug("Total weight for hypothesis {$hypothesis}: {$totalWeight}");
             $results[$hypothesis] = $totalWeight;
 
 
@@ -215,6 +219,9 @@ class LandingController extends Controller
                     $contribution = $rule->weight / $totalWeight;
 
                     $probability_H = $rule->weight * $contribution;
+
+                    // 🟢 Log contribution & probability_H
+                    Log::debug("Hypothesis {$hypothesis}, Evidence {$evidenceId}: Weight={$rule->weight}, Contribution={$contribution}, P(H|E)={$probability_H}");
                     $probabilityHypothesis[$hypothesis][$evidenceId] = $probability_H;
                 } else {
                     $probabilityHypothesis[$hypothesis][$evidenceId] = 0;
@@ -226,13 +233,19 @@ class LandingController extends Controller
                 $totalProbabilities[$hypothesis] = array_sum($probability_H);
             }
 
+            // 🔵 Log total probabilities
+            Log::debug("Total Probabilities for hypothesis {$hypothesis}: " . $totalProbabilities[$hypothesis]);
+
+
             foreach ($selectedEvidences as $evidenceId) {
                 $rule = Rule::where('evidence_id', $evidenceId)
                     ->where('hypothesis_id', $hypothesis)
                     ->first();
                 if ($rule && isset($totalProbabilities[$hypothesis]) && $totalProbabilities[$hypothesis] > 0) {
                     $bayesValue = ($probability_H[$evidenceId] * $rule->weight) / $totalProbabilities[$hypothesis];
-                    $bayesValues[$hypothesis][$evidenceId] = $bayesValue;
+                    $bayesValues[$hypothesis][$evidenceId] = $bayesValue; 
+                    // 🔴 Log nilai Bayes akhir
+                    Log::debug("Bayes Value for hypothesis {$hypothesis}, evidence {$evidenceId}: {$bayesValue}");
                 } else {
                     $bayesValues[$hypothesis][$evidenceId] = 0;
                 }
@@ -242,6 +255,9 @@ class LandingController extends Controller
             foreach ($bayesValues as $hypothesis => $bayesvalue) {
                 $totalBayes[$hypothesis] = array_sum($bayesvalue) * 100;
             }
+
+            // 🟣 Log total Bayes
+            Log::debug("Total Bayes for hypothesis {$hypothesis}: " . $totalBayes[$hypothesis]);
 
             // Check if the current hypothesis has the maximum weight
             if (is_null($maxWeight) || $totalWeight > $maxWeight) {
